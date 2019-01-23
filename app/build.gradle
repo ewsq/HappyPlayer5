@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.zlm.hp"
         minSdkVersion 19
-        targetSdkVersion 22
+        targetSdkVersion 27
         versionCode 5
         versionName "v5.0"
         /**添加多 dex分包支持*/
@@ -43,8 +43,9 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:multidex:1.0.1'
-    implementation 'com.android.support:appcompat-v7:28.0+'
+    implementation 'com.android.support:appcompat-v7:27.+'
+    implementation 'com.android.support:recyclerview-v7:27.+'
+    implementation 'com.android.support:multidex:1.0.1'
     testImplementation 'junit:junit:4.12'
     implementation files('libs/log4j-1.2.17.jar')
     implementation files('libs/android-logging-log4j-1.0.3.jar')
@@ -57,17 +58,16 @@ dependencies {
      * ijkplayer
      *
      * 引用下面的so文件，不支持无损歌曲格式
-     compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
-     compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.4'
-     compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.4'
-     compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
-     compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.4'
-     compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+     implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+     implementation 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.4'
+     implementation 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.4'
+     implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
+     implementation 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.4'
+     implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
      *
      */
-    implementation 'com.android.support:recyclerview-v7:26.0+'
-    compile 'com.squareup.okhttp3:okhttp:3.3.1'
-    compile 'com.belerweb:pinyin4j:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+    implementation 'com.belerweb:pinyin4j:2.5.0'
     /**
      * 右滑动关闭
      */
